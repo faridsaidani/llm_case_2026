@@ -28,7 +28,7 @@ Source: `output_script/rapport_synthese.txt`
   - commentaires vides: 1
   - NPS invalides: 3 677
   - CSAT invalides: 0
-- Baseline classification (négatif vs positif):
+- Baseline classification (négatif vs positif): (**rajoutée pour qvoir un peu plus d'insights mais pas necessaire**) 
   - Accuracy: 0.7977
   - Precision: 0.4536
   - Recall: 0.8206
