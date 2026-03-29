@@ -1,0 +1,114 @@
+================================================================================
+RAPPORT D'ANALYSE CSAT - SYNTHÈSE
+================================================================================
+
+1. QUALITÉ DES DONNÉES
+--------------------------------------------------------------------------------
+   - Nombre total de lignes: 38303
+   - Commentaires vides: 1 (0.0%)
+   - NPS invalides: 3677
+   - CSAT invalides: 0
+
+2. DISTRIBUTION CSAT PAR OFFRE
+--------------------------------------------------------------------------------
+   Top 5 offres avec le CSAT le plus élevé:
+     * 15: Freebox Crystal (NEW) | 24.99€: 4.40 (48 commentaires)
+     * 27: Freebox Delta avec Apple TV 4K | 49.99€: 4.33 (9 commentaires)
+     * 25: Freebox Pop avec TV by CANAL | 44.99€: 4.26 (261 commentaires)
+     * 11: Freebox Révolution avec TV by CANAL | 39.99€: 4.24 (3527 commentaires)
+     * 08: Freebox Révolution | 29.99€: 4.23 (1214 commentaires)
+
+   Top 5 offres avec le CSAT le plus faible:
+     * 19: Freebox One | 39.99€: 3.96 (48 commentaires)
+     * 23: Freebox Delta S | 39.99€: 3.94 (63 commentaires)
+     * 105: Box 5G | 39.99€: 3.86 (50 commentaires)
+     * 30: Freebox Ultra sans Player TV | 59.99€: 3.69 (32 commentaires)
+     * 32: Freebox Ultra avec Apple TV 4K | 59.99€: 3.20 (5 commentaires)
+
+3. TERMES CLÉS DANS LES VERBATIMS NÉGATIFS
+--------------------------------------------------------------------------------
+   Top 10 termes:
+     * problème: 1392 occurrences
+     * demande: 1032 occurrences
+     * téléphone: 854 occurrences
+     * box: 716 occurrences
+     * réponse: 693 occurrences
+     * internet: 565 occurrences
+     * technicien: 534 occurrences
+     * ligne: 531 occurrences
+     * forfait: 496 occurrences
+     * solution: 416 occurrences
+
+   Top 10 bigrams:
+     * geste commercial: 280 occurrences
+     * carte sim: 198 occurrences
+     * problème résolu: 185 occurrences
+     * changer d'opérateur: 132 occurrences
+     * résoudre problème: 88 occurrences
+     * trop long: 66 occurrences
+     * frais résiliation: 60 occurrences
+     * connexion internet: 57 occurrences
+     * hors forfait: 56 occurrences
+     * demande remboursement: 51 occurrences
+
+4. MODÈLE BASELINE (CLASSIFICATION NÉGATIF/POSITIF)
+--------------------------------------------------------------------------------
+   - Accuracy:  0.7977
+   - Precision: 0.4536
+   - Recall:    0.8206
+   - F1 Score:  0.5842
+   - AUC:       0.8811
+
+   Top 5 termes discriminants (négatifs):
+     * nul: 3.9626
+     * inadmissible: 3.1464
+     * désagréable: 3.1002
+     * d'opérateur: 3.0301
+     * déçu: 2.7854
+
+5. TOPICS THÉMATIQUES (LDA)
+--------------------------------------------------------------------------------
+   Perplexité: 1155.43
+   8 topics identifiés:
+
+   Topic 0 (873 documents):
+     réponse | demande | remboursement | résiliation | ligne | reçu | courrier | message | frais | situation | temps | retour
+
+   Topic 1 (851 documents):
+     commercial | geste | abonnement | box | ans | clients | offre | freebox | demande | forfait | mobile | résilier
+
+   Topic 2 (1048 documents):
+     problème | réseau | résolu | solution | internet | résoudre | connexion | téléphone | semaines | fonctionne | d'opérateur | changer
+
+   Topic 3 (710 documents):
+     demande | téléphone | impossible | problème | joindre | réponse | conseillers | réclamation | solution | pouvoir | courrier | facture
+
+   Topic 4 (800 documents):
+     forfait | déçu | box | changer | internet | mobile | euros | peux | payer | téléphone | hors | pense
+
+   Topic 5 (783 documents):
+     problème | demande | prise | notre | conseillers | mail | appel | chaque | nouvelle | passe | compte | j'attends
+
+   Topic 6 (828 documents):
+     ligne | téléphone | carte | sim | demande | boutique | résilier | conseillère | nom | contrat | lui | compte
+
+   Topic 7 (742 documents):
+     technicien | fibre | trop | rendez | nul | internet | rdv | panne | long | connexion | délai | box
+
+6. ENRICHISSEMENT LLM (GPT-4)
+--------------------------------------------------------------------------------
+   Verbatims enrichis: 100
+   Parse success rate: 100.0%
+
+   Distribution des thèmes:
+     * support client insuffisant: 36 (36.0%)
+     * service technique: 22 (22.0%)
+     * tarification: 15 (15.0%)
+     * churn: 12 (12.0%)
+     * probleme d'internet: 10 (10.0%)
+     * probleme avec le produit: 4 (4.0%)
+     * probleme de communication: 1 (1.0%)
+
+================================================================================
+FIN DU RAPPORT
+================================================================================
