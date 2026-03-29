@@ -72,15 +72,60 @@ Tous les livrables sont dans `output_script/`.
   - `rapport_synthese.txt`
 
 ## Exécution
-### 1) Lancer l'analyse complète
+
+### Option 1 : Exécution locale (Python)
+
+#### 1) Lancer l'analyse complète
 ```bash
 python analyse_csat_complete_standalone.py
 ```
 
-### 2) Lancer le dashboard
+#### 2) Lancer le dashboard
 ```bash
 streamlit run dashboard_llm_streamlit.py
 ```
+
+### Option 2 : Exécution avec Docker
+
+#### Prérequis Docker
+- Docker et Docker Compose installés
+
+#### 1) Construire l'image
+```bash
+docker build -t csat-analysis .
+```
+
+#### 2) Lancer l'analyse complète
+```bash
+docker run -v $(pwd)/output_script:/app/output_script \
+           -v $(pwd)/outputs:/app/outputs \
+           csat-analysis
+```
+
+#### 3) Lancer le dashboard (Streamlit)
+```bash
+docker run -p 8501:8501 \
+           -v $(pwd)/output_script:/app/output_script \
+           -v $(pwd)/outputs:/app/outputs \
+           csat-analysis \
+           streamlit run dashboard_llm_streamlit.py --server.address=0.0.0.0
+```
+
+Puis accédez à `http://localhost:8501`
+
+#### 4) Utiliser Docker Compose (recommandé)
+
+**Lancer l'analyse uniquement:**
+```bash
+docker-compose up analysis
+```
+
+**Lancer le dashboard uniquement:**
+```bash
+docker-compose --profile dashboard up dashboard
+```
+
+*Note:* Définir `OPENAI_API_KEY` dans le fichier `.env` pour activer l'enrichissement LLM dans les conteneurs.
 
 ## Prérequis
 - Python 3.10+

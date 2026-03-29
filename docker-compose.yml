@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Service pour l'analyse CSAT (exécution du script)
+  analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: csat-analysis
+    volumes:
+      - ./output_script:/app/output_script
+      - ./outputs:/app/outputs
+      - ./db.sqlite:/app/db.sqlite
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    command: python analyse_csat_complete_standalone.py
+
+  # Service pour le dashboard Streamlit (optionnel)
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: csat-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./output_script:/app/output_script
+      - ./outputs:/app/outputs
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    command: streamlit run dashboard_llm_streamlit.py --server.address=0.0.0.0
+    profiles:
+      - dashboard

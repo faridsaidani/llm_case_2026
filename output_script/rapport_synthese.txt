@@ -95,20 +95,6 @@ RAPPORT D'ANALYSE CSAT - SYNTHÈSE
    Topic 7 (742 documents):
      technicien | fibre | trop | rendez | nul | internet | rdv | panne | long | connexion | délai | box
 
-6. ENRICHISSEMENT LLM (GPT-4)
---------------------------------------------------------------------------------
-   Verbatims enrichis: 100
-   Parse success rate: 100.0%
-
-   Distribution des thèmes:
-     * support client insuffisant: 36 (36.0%)
-     * service technique: 22 (22.0%)
-     * tarification: 15 (15.0%)
-     * churn: 12 (12.0%)
-     * probleme d'internet: 10 (10.0%)
-     * probleme avec le produit: 4 (4.0%)
-     * probleme de communication: 1 (1.0%)
-
 ================================================================================
 FIN DU RAPPORT
 ================================================================================
